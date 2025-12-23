@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Download } from "lucide-react";
 import { Button } from "./ui/button";
 
 const navLinks = [
@@ -13,11 +13,11 @@ export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
       <div className="section-container">
         <div className="flex items-center justify-between h-16">
           <a href="#" className="text-xl font-bold text-foreground">
-            MK<span className="text-accent">.</span>
+            MK<span className="text-primary">.</span>
           </a>
 
           {/* Desktop Navigation */}
@@ -26,21 +26,22 @@ export const Navigation = () => {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
               >
                 {link.label}
               </a>
             ))}
-            <Button variant="hero" size="sm" asChild>
+            <Button variant="default" size="sm" asChild>
               <a href="/manish-kumar-resume.pdf" download>
-                Download Resume
+                <Download size={16} />
+                Resume
               </a>
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2"
+            className="md:hidden p-2 text-foreground"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
@@ -56,15 +57,16 @@ export const Navigation = () => {
                 <a
                   key={link.href}
                   href={link.href}
-                  className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                  className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors py-2"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.label}
                 </a>
               ))}
-              <Button variant="hero" size="sm" asChild className="w-fit">
+              <Button variant="default" size="sm" asChild className="w-fit">
                 <a href="/manish-kumar-resume.pdf" download>
-                  Download Resume
+                  <Download size={16} />
+                  Resume
                 </a>
               </Button>
             </div>
