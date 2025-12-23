@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, Linkedin, Github, Send, MapPin } from "lucide-react";
+import { Mail, Linkedin, Github, Send, ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
@@ -39,74 +39,74 @@ export const Contact = () => {
   return (
     <section id="contact" className="section-padding bg-background">
       <div className="section-container">
-        <div className="text-center mb-12">
-          <p className="text-accent font-semibold mb-2">Get in Touch</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-            Contact Me
-          </h2>
+        <div className="text-center mb-16">
+          <p className="section-subtitle">Get in Touch</p>
+          <h2 className="section-title">Contact Me</h2>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
           {/* Contact Info */}
           <div>
-            <h3 className="text-xl font-semibold text-foreground mb-6">
+            <h3 className="text-xl font-semibold text-foreground mb-4">
               Let's Connect
             </h3>
             <p className="text-muted-foreground mb-8 leading-relaxed">
               I'm actively looking for entry-level opportunities in Data Analytics 
-              and Python Development. Feel free to reach out for collaboration, 
-              opportunities, or just to say hello!
+              and Python Development. Feel free to reach out!
             </p>
 
-            <div className="space-y-4">
+            <div className="space-y-3">
               <a
                 href="mailto:velpulamanish5@gmail.com"
-                className="flex items-center gap-4 p-4 bg-card rounded-lg hover:shadow-card transition-shadow group"
+                className="flex items-center gap-4 p-4 bg-card rounded-xl border border-border hover:border-primary/50 transition-all group"
               >
-                <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center group-hover:bg-accent group-hover:text-accent-foreground transition-colors">
-                  <Mail size={20} className="text-accent group-hover:text-accent-foreground" />
+                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                  <Mail size={20} className="text-primary" />
                 </div>
-                <div>
-                  <p className="text-sm text-muted-foreground">Email</p>
+                <div className="flex-1">
+                  <p className="text-xs text-muted-foreground uppercase tracking-wide">Email</p>
                   <p className="font-medium text-foreground">velpulamanish5@gmail.com</p>
                 </div>
+                <ArrowRight size={16} className="text-muted-foreground group-hover:text-primary transition-colors" />
               </a>
 
               <a
                 href="http://linkedin.com/in/velpula-manish/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 p-4 bg-card rounded-lg hover:shadow-card transition-shadow group"
+                className="flex items-center gap-4 p-4 bg-card rounded-xl border border-border hover:border-primary/50 transition-all group"
               >
-                <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center group-hover:bg-accent group-hover:text-accent-foreground transition-colors">
-                  <Linkedin size={20} className="text-accent group-hover:text-accent-foreground" />
+                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                  <Linkedin size={20} className="text-primary" />
                 </div>
-                <div>
-                  <p className="text-sm text-muted-foreground">LinkedIn</p>
+                <div className="flex-1">
+                  <p className="text-xs text-muted-foreground uppercase tracking-wide">LinkedIn</p>
                   <p className="font-medium text-foreground">Manish Kumar</p>
                 </div>
+                <ArrowRight size={16} className="text-muted-foreground group-hover:text-primary transition-colors" />
               </a>
 
               <a
                 href="https://github.com/velpula-manish"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 p-4 bg-card rounded-lg hover:shadow-card transition-shadow group"
+                className="flex items-center gap-4 p-4 bg-card rounded-xl border border-border hover:border-accent/50 transition-all group"
               >
-                <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center group-hover:bg-accent group-hover:text-accent-foreground transition-colors">
-                  <Github size={20} className="text-accent group-hover:text-accent-foreground" />
+                <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
+                  <Github size={20} className="text-accent" />
                 </div>
-                <div>
-                  <p className="text-sm text-muted-foreground">GitHub</p>
+                <div className="flex-1">
+                  <p className="text-xs text-muted-foreground uppercase tracking-wide">GitHub</p>
                   <p className="font-medium text-foreground">velpula-manish</p>
                 </div>
+                <ArrowRight size={16} className="text-muted-foreground group-hover:text-accent transition-colors" />
               </a>
             </div>
           </div>
 
           {/* Contact Form */}
-          <div>
-            <form onSubmit={handleSubmit} className="space-y-6">
+          <div className="bg-card p-8 rounded-xl border border-border">
+            <form onSubmit={handleSubmit} className="space-y-5">
               <div>
                 <label
                   htmlFor="name"
@@ -122,7 +122,7 @@ export const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   placeholder="Your name"
-                  className="bg-card"
+                  className="bg-background"
                 />
               </div>
 
@@ -141,7 +141,7 @@ export const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="your.email@example.com"
-                  className="bg-card"
+                  className="bg-background"
                 />
               </div>
 
@@ -159,8 +159,8 @@ export const Contact = () => {
                   value={formData.message}
                   onChange={handleChange}
                   placeholder="Your message..."
-                  rows={5}
-                  className="bg-card resize-none"
+                  rows={4}
+                  className="bg-background resize-none"
                 />
               </div>
 
