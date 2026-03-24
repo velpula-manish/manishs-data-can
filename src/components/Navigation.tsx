@@ -35,6 +35,14 @@ export const Navigation = () => {
               <a href="/manish-kumar-resume.pdf" download>
                 <Download size={16} />
                 Resume
+                <button
+                  
+                  
+                  onClick={() => document.documentElement.classList.toggle("dark")}
+                  className="ml-2 px-3 py-1 border rounded-lg text-sm"
+                >
+                  🌙
+                </button>
               </a>
             </Button>
           </div>
