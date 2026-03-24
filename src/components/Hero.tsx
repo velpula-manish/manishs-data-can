@@ -21,7 +21,7 @@ export const Hero = () => {
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 animate-fade-up animate-delay-100 tracking-tight">
               Hi, I'm{" "}
-              <span className="text-gradient">Manish Kumar</span>
+              <span className="text-gradient"> Velpula Manish Kumar</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-muted-foreground mb-6 animate-fade-up animate-delay-200 font-medium">
@@ -42,8 +42,8 @@ export const Hero = () => {
                   <ArrowRight size={18} />
                 </a>
               </Button>
-              <Button variant="outline" size="lg" asChild>
-                <a href="/manish-kumar-resume.pdf" download>
+              <Button variant="outline" size="lg" asChild> 
+                <a href="/manish_AT.pdf" download>
                   <Download size={18} />
                   Download Resume
                 </a>
