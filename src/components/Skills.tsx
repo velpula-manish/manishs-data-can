@@ -46,45 +46,46 @@ const skillCategories = [
 
 export const Skills = () => {
   return (
-    <section id="skills" className="section-padding bg-background">
+    <section id="skills" className="section-padding bg-gray-50 dark:bg-gray-900">
       <div className="section-container">
         <div className="text-center mb-16">
           <p className="section-subtitle">What I Work With</p>
-          <h2 className="section-title"> Skills & Technologies </h2>
+          <h2 className="section-title">Skills & Technologies</h2>
         </div>
 
         <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {skillCategories.map((category) => (
             <div
               key={category.title}
-              className="p-6 rounded-2xl 
-backdrop-blur-lg bg-white/10 dark:bg-white/5 
-border border-white/20 
-shadow-lg hover:shadow-2xl 
-transition-all duration-300 
-hover:-translate-y-2"
->
-              
-              <h3 className={`text-lg font-semibold mb-4 pb-3 border-b border-border ${
-                category.color === 'primary' ? 'text-primary' : 'text-accent'
-              }`}>
+              className="glow-card p-6 rounded-2xl 
+              bg-white dark:bg-white/5 
+              backdrop-blur-lg 
+              border border-gray-200 dark:border-white/20 
+              shadow-md dark:shadow-lg 
+              transition-all duration-300 
+              hover:-translate-y-2 hover:shadow-xl"
+            >
+              {/* Title */}
+              <h3 className="text-lg font-semibold mb-4 pb-3 border-b border-gray-200 dark:border-gray-700 
+              text-gray-900 dark:text-white">
                 {category.title}
               </h3>
+
+              {/* Skills */}
               <div className="flex flex-wrap gap-2">
                 {category.skills.map((skill) => (
                   <span
                     key={skill}
                     className={`px-3 py-1 rounded-full text-xs font-medium 
-  transition-all duration-300 cursor-pointer
-  hover:scale-110 hover:shadow-md
-  ${
-    category.title === "Data & Analytics"
-      ? "bg-green-500/20 text-green-300 border border-green-400/30 hover:bg-green-500/30"
-      : category.title === "Cloud & Technologies"
-      ? "bg-blue-500/20 text-blue-300 border border-blue-400/30 hover:bg-blue-500/30"
-      : "bg-gray-500/20 text-gray-300 border border-gray-400/30 hover:bg-gray-500/30"
-  }`}
-                  
+                    transition-all duration-300 cursor-pointer
+                    hover:scale-110
+                    ${
+                      category.title === "Data & Analytics"
+                        ? "bg-green-100 text-green-700 dark:bg-green-500/20 dark:text-green-300"
+                        : category.title === "Cloud & Technologies"
+                        ? "bg-blue-100 text-blue-700 dark:bg-blue-500/20 dark:text-blue-300"
+                        : "bg-gray-100 text-gray-700 dark:bg-gray-500/20 dark:text-gray-300"
+                    }`}
                   >
                     {skill}
                   </span>
