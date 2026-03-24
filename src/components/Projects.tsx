@@ -9,7 +9,7 @@ const projects = [
       "Medical AI assistant using RAG + Vector DB + LLM for accurate responses.",
     techStack: ["Python", "RAG", "LLM"],
     github: "https://github.com/velpula-manish/medirag-ai",
-    live: "",
+    live: "https://medirag-ai-4v4miutwq4nir8rrodapbw.streamlit.app/",
   },
   {
     title: "AI Travel Planner",
@@ -17,7 +17,7 @@ const projects = [
       "AI-based travel planner with smart itinerary, weather, and budget analysis.",
     techStack: ["Python", "Streamlit", "AI"],
     github: "https://github.com/velpula-manish/ai-travel-planner",
-    live: "",
+    live: "https://ai-travel-planner-h7f7ryewjbufa5tdvfewnu.streamlit.app/",
   },
   {
     title: "Flask Face Attendance System",
