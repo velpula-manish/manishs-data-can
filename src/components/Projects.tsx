@@ -5,26 +5,32 @@ import { motion } from "framer-motion";
 const projects = [
   {
     title: "MediRAG AI (Medical Assistant)",
+    image: "/medirag.png",
     description:
       "Medical AI assistant using RAG + Vector DB + LLM for accurate responses.",
     techStack: ["Python", "RAG", "LLM"],
     github: "https://github.com/velpula-manish/medirag-ai",
     live: "https://medirag-ai-4v4miutwq4nir8rrodapbw.streamlit.app/",
+    
   },
   {
     title: "AI Travel Planner",
+    image: "/travel.png",
     description:
       "AI-based travel planner with smart itinerary, weather, and budget analysis.",
     techStack: ["Python", "Streamlit", "AI"],
     github: "https://github.com/velpula-manish/ai-travel-planner",
     live: "https://ai-travel-planner-h7f7ryewjbufa5tdvfewnu.streamlit.app/",
+    
   },
   {
     title: "Flask Face Attendance System",
+    image: "/attendance.png",
     description:
       "Face recognition attendance system using OpenCV and Flask.",
     techStack: ["Python", "Flask", "OpenCV"],
     github: "https://github.com/velpula-manish/flask-face-attendance-system",
+    
   },
   {
     title: "Python Full Stack Web App",
@@ -78,6 +84,13 @@ export const Projects = () => {
               whileHover={{ scale: 1.03 }}
               className="p-6 rounded-2xl border border-green-200 bg-white shadow-md hover:shadow-xl transition-all duration-300"
             >
+              {/* Project Image */}
+              <img
+                
+                src={project.image}
+                alt={project.title}
+                className="w-full h-40 object-cover rounded-lg mb-4"
+              />
               {/* Title */}
               <h3 className="text-xl font-semibold text-green-700 mb-2">
                 {project.title}
