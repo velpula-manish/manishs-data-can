@@ -34,6 +34,7 @@ const projects = [
   },
   {
     title: "Python Full Stack Web App",
+    image: "/python.png",
     description:
       "Django full-stack app with authentication and database integration.",
     techStack: ["Python", "Django", "SQL"],
@@ -42,6 +43,7 @@ const projects = [
   },
   {
     title: "Smart City Infrastructure Analysis",
+    image: "/smartcity.png",
     description:
       "Data analysis project for smart city planning.",
     techStack: ["Python", "Data Analysis"],
@@ -50,6 +52,7 @@ const projects = [
   },
   {
     title: "Cafe Management System",
+    image: "/city.png",
     description:
       "Java-based system for managing cafe operations.",
     techStack: ["Java"],
