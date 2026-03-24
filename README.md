@@ -4,7 +4,7 @@
 
 🌐 Live Portfolio
 
-**URL**:##  https://manishs-data-can.lovable.app
+**URL**: https://manishs-data-can.lovable.app
 
 ## How can I edit this code?
 
