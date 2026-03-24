@@ -62,12 +62,13 @@ export const Skills = () => {
               backdrop-blur-lg 
               border border-gray-200 dark:border-white/20 
               shadow-md dark:shadow-lg 
-              transition-all duration-300 
-              hover:-translate-y-2 hover:shadow-xl"
+transition-all duration-300 
+hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl
+              
             >
               {/* Title */}
               <h3 className="text-lg font-semibold mb-4 pb-3 border-b border-gray-200 dark:border-gray-700 
-              text-gray-900 dark:text-white">
+              bg-gradient-to-r from-green-500 to-blue-500 bg-clip-text text-transparent">
                 {category.title}
               </h3>
 
