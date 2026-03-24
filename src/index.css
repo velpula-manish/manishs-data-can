@@ -169,3 +169,7 @@ html.dark {
     radial-gradient(circle at 25% 25%, hsl(217 91% 50% / 0.03) 0%, transparent 50%),
     radial-gradient(circle at 75% 75%, hsl(160 84% 39% / 0.03) 0%, transparent 50%);
 }
+/* Glow effect */
+.glow-card:hover {
+  box-shadow: 0 0 25px rgba(34, 197, 94, 0.4);
+}
