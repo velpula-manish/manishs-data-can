@@ -52,7 +52,7 @@ const projects = [
   },
   {
     title: "Cafe Management System",
-    image: "/city.png",
+    image: "/cafe.png",
     description:
       "Java-based system for managing cafe operations.",
     techStack: ["Java"],
